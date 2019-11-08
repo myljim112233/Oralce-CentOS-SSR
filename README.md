@@ -5,7 +5,7 @@ sudo su
 
 cd /etc/
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/bbrplus/centos/7/kernel-4.14.129-bbrplus.rpm
-rpm -ivh kernel-4.14.129-bbrplus.rpm –force
+rpm -ivh kernel-4.14.129-bbrplus.rpm --force
 rpm -qa | grep kernel
 grub2-mkconfig -o /boot/grub2/grub.cfg
 grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
