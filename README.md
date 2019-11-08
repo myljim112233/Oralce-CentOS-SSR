@@ -10,7 +10,7 @@ rpm -qa | grep kernel
 grub2-mkconfig -o /boot/grub2/grub.cfg
 grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 cat /boot/grub2/grub.cfg |grep menuentry
-grub2-set-default ‘CentOS Linux (4.14.129-bbrplus) 7 (Core)’
+grub2-set-default 'CentOS Linux (4.14.129-bbrplus) 7 (Core)'
 reboot
 
 sudo su
