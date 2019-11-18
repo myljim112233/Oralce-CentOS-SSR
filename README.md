@@ -30,7 +30,7 @@ cat /boot/grub2/grub.cfg |grep menuentry
 grub2-set-default 'CentOS Linux (5.3.11-1.el7.elrepo.x86_64) 7 (Core)'
 vim /etc/sysctl.conf
 ```
-net.core.default_qdisc = fq
+net.core.default_qdisc = fq     
 net.ipv4.tcp_congestion_control = bbr
 ```
 
