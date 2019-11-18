@@ -1,5 +1,6 @@
 # Oracle Cent OS SSR 
-## Replace Kernel && Install BBR Plus
+
+## Replace Kernel && Install BBR Plus(Not Stable)
 ```
 sudo su
 
@@ -18,6 +19,24 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 chmod +x tcp.sh
 ./tcp.sh
 ```
+
+## Update Original Kernel && Install BBR Plus
+```
+sudo su
+
+cd /etc/
+rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+cat /boot/grub2/grub.cfg |grep menuentry
+grub2-set-default 'CentOS Linux (5.3.11-1.el7.elrepo.x86_64) 7 (Core)'
+vim /etc/sysctl.conf
+```
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+```
+
+reboot
+```
+
 ## Install SSR
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
